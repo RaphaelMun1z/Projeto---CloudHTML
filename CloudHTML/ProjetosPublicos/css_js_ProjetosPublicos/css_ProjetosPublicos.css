@@ -1,0 +1,962 @@
+/*--------------------------- RESET ------------------------------*/
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	cursor: url('imagens/cursorlol.cur'), default;
+	outline: none;
+
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+i,
+button{
+	cursor: url('imagens/normal.cur'), default !important;
+}
+
+body{
+	background-color: #f7fafa; 
+}
+
+form input,
+textarea,
+select,
+option{
+	cursor: url('imagens/normal.cur'), default !important;
+}
+
+/*--------------------------- Font Family ------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*------------------------------ Header ----------------------------------*/
+
+.icones-header{
+	font-size: max(20px, 1.5vw);
+}
+
+.exit{
+	color: #f53d49;
+}
+
+header{
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 60px;
+    background-color: rgba(11, 174, 186, 0.1);
+    box-shadow: 0px 5px 60px black;
+    z-index: 999;
+}
+.logo a{
+	height: 50px;
+	display: flex;
+	background-size: cover;
+	object-fit: cover;
+	overflow: hidden;
+	padding-left: 40px; 
+}
+.logo a img{
+	cursor: url('imagens/normal.cur'), default !important;
+}
+.logo > span{
+	color: #111111;
+}
+nav{
+	padding: 40px;
+}
+nav ul{
+	display: flex;
+}
+nav ul li{
+	margin: 5px;
+	padding: 5px;
+	color: #e5e5e5;
+	list-style: none;
+	cursor: url('imagens/normal.cur'), default !important;
+}
+nav ul li:hover{
+	cursor: pointer;
+	color: white;
+	background-color: rgba(11, 174, 186, 0.8);
+	border-radius: 10px;
+}
+.exit{
+	color: #f02936;
+}
+
+/*------------------------------- Loader ---------------------------------*/
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:100%;
+}
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: #242f3f;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*--------------------------- First Section ------------------------------*/
+
+#first-section{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100vh; 
+	background: url('imagens/fundoCloudHtml.png'); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	object-fit: cover;
+	justify-content: center;
+	align-items: center;
+	background-attachment: fixed;
+}
+
+#first-section img{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	object-fit: cover;
+	max-width: 90%;
+	pointer-events: none;
+}
+
+/*------------------------- Campo pesquisar ------------------------*/
+
+#search-place{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 30vh;
+	flex-wrap: wrap;
+	flex-direction: row;
+	background-image: linear-gradient(#b2ace6, #8681b8);
+}
+
+#text-place{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 30%;
+	justify-content: center;
+	align-items: center;
+}
+
+#text-place p{
+	text-align: center;
+	font-size: max(25px, 2vw);
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+#align-input-place{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 70%;
+}
+
+#input-place{
+	position: relative;
+	display: flex;
+	width: 40%;
+	min-width: 300px;
+	height: 10vh;
+	background-color: transparent;
+	justify-content: center;
+	align-items: center;
+}
+
+#input-place input{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	border: none;
+	font-size: max(15px, 2vw);
+	text-align: center;
+	letter-spacing: 1.5px;
+	box-shadow: 0 0 15px black;
+}
+
+#send-place{
+	position: absolute;
+	display: flex;
+	height: 80%;
+	width: 30%;
+	right: 0;
+	transform: translateX(50%);
+	justify-content: center;
+	align-items: center;
+}
+
+#send-place button{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	background-color: rgba(201, 201, 201, 0.8);
+}
+
+#send-place button:hover{
+	background-color: rgba(201, 201, 201, 1.0);
+}
+
+#send-place button i{
+	font-size: max(15px, 1.5vw);
+	pointer-events: none;
+}
+
+/*--------------------------------| Projetos Listados |---------------------------------*/
+.base-projetos-listados{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: auto;
+	min-height: 100vh;
+	background-color: blue;
+	background-image: url("imagens/fundo_search_place.jpg");
+	object-fit: cover;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.projetos-listados{
+	position: relative;
+	display: flex;
+	width: 90%;
+	height: 35vh;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 10px 10px;
+	align-items: center;
+	flex-wrap: wrap;
+	box-shadow: 0 0 15px black;
+	border-radius: 5px;
+}
+
+.img-perfil-autor-projetos-listados{
+	position: relative;
+	display: flex;
+	width: 135px;
+	height: 135px;
+	background-color: white;
+	border-radius: 50%;
+	overflow: hidden;
+	background-image: url("imagens/img_user.png");
+	background-size: contain;
+	object-fit: cover;
+	background-position: center;
+}
+
+.title-projetos-listados{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 60%;
+	flex-wrap: wrap;
+}
+
+.projectName-title-projetos-listados{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 35%;
+	background-color: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	color: #decdcc;
+}
+
+.title-projeto{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 65%;
+	justify-content: center;
+	align-items: center;
+	text-align-last: center;
+	text-align: center;
+	overflow: hidden;
+	font-size: 20px;
+	color: white;
+}
+
+.autor-projetos-listados{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 40%;
+	flex-wrap: wrap;
+}
+
+.autor-projeto{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 60%;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.autorName-autor-projetos-listados{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 30%;
+	background-color: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	color: #decdcc;
+}
+
+.leftPart{
+	position: relative;
+	display: flex;
+	width: 15%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.centerPart{
+	position: relative;
+	display: flex;
+	width: 60%;
+	height: 100%;
+	flex-wrap: wrap;
+}
+
+.rightPart{
+	position: relative;
+	display: flex;
+	width: 25%;
+	height: 100%;
+	flex-wrap: wrap;
+}
+
+.rightPart-divisao{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 50%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.projects-type{
+	position: relative;
+	display: flex;
+	width: 70px;
+	height: 70px;
+	border: 3px solid white;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	cursor: url('imagens/normal.cur'), default !important;
+}
+
+.projects-type:nth-child(1){
+	color: #ff4c15;
+	opacity: 1.0;
+}
+
+.projects-type:nth-child(2){
+	color: #0076c0;
+	opacity: 1.0;
+}
+
+.projects-type:nth-child(3){
+	color: #f6dd04;
+	opacity: 1.0;
+}
+
+.download-project-button{
+	position: relative;
+	display: flex;
+	width: 90%;
+	height: 70%;
+	background-color: #7a8485;
+	border-radius: 5px;
+	justify-content: center;
+	align-items: center;
+	cursor: url('imagens/normal.cur'), default !important;
+	font-size: 25px;
+	letter-spacing: 1px;
+	font-weight: 700;
+}
+
+.download-project-button:hover{
+	background-color: #a1aaab;
+	color: white;
+}
+
+/*-----------------------| Tela login |--------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700&display=swap');
+
+.base-form-login{
+	position: fixed;
+	display: none;
+	width: 70%;
+	height: 90vh;
+	background-color: black;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url("imagens/fundo_form_login.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 5px;
+	box-shadow: 0 0 15px black;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
+}
+.layout-inside-form-login{
+	position: relative;
+	display: flex;
+	width: 80%;
+	height: 80%;
+	background-color: rgba(122, 104, 103, .3);
+	flex-wrap: wrap;
+}
+.form-login{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-wrap: wrap;
+}
+.form-title-login{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 20%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: max(5vw, 50px);
+	font-family: 'Alegreya Sans SC', sans-serif;
+}
+.form-input-login{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 20%;
+	justify-content: center;
+	align-items: center;
+}
+.form-input-login:nth-child(5){
+	justify-content: space-around;
+}
+.input-form-login{
+	position: relative;
+	display: flex;
+	width: 85%;
+	height: 70%;
+	border-radius: 50px;
+	border: none;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: max(25px);
+	transition: 0.5s;
+	cursor: url('imagens/normal.cur'), default;
+}
+.input-form-login:focus{
+	transition: 0.5s;
+	box-shadow: 0 0 10px black;
+	width: 90%;
+}
+.form-ancoras-login{
+	font-family: 'Alegreya Sans SC', sans-serif;
+	cursor: url('imagens/normal.cur'), default;
+}
+.form-ancoras-login i,
+.form-ancoras-login a{
+	pointer-events: none;
+}
+.ifl-submit{
+	background-color: #9e9493;
+	color: #403837;
+	cursor: url('imagens/normal.cur'), default;
+}
+.ifl-submit:hover{
+	color: white;
+	background-color: #736c6c;
+}
+.close-base-form-login{
+	position: absolute;
+	display: flex;
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	z-index: 999;
+	border-radius: 50%;
+	top: 5px;
+	right: 5px;
+	justify-content: center;
+	align-items: center;
+	font-size: max(30px);
+	cursor: url('imagens/normal.cur'), default;
+}
+.form-ancoras-login{
+	transition: 1s;
+}
+.form-ancoras-login:hover{
+	transform: scale(1.1);
+	transition: 1s;
+}
+.close-base-form-login:hover{
+	border-color: red;
+	color: red;
+}
+
+/*-----------------------| Tela cadastro |------------------------------*/
+
+.base-form-cadastro{
+	position: fixed;
+	display: none;
+	width: 70%;
+	height: 90vh;
+	background-color: black;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url("imagens/fundo_form_login.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 5px;
+	box-shadow: 0 0 15px black;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
+}
+.layout-inside-form-cadastro{
+	position: relative;
+	display: flex;
+	width: 80%;
+	height: 100%;
+	background-color: rgba(122, 104, 103, .3);
+	flex-wrap: wrap;
+}
+.form-title-cadastro{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 15%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: max(5vw, 50px);
+	font-family: 'Alegreya Sans SC', sans-serif;
+}
+.form-input-cadastro{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 15%;
+	justify-content: center;
+	align-items: center;
+}
+.form-input-cadastro:nth-child(5){
+	justify-content: space-around;
+}
+.input-form-cadastro{
+	position: relative;
+	display: flex;
+	width: 85%;
+	height: 70%;
+	border-radius: 50px;
+	border: none;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: max(25px);
+	transition: 0.5s;
+}
+.input-form-cadastro:focus{
+	transition: 0.5s;
+	box-shadow: 0 0 10px black;
+	width: 90%;
+}
+.form-ancoras-cadastro{
+	font-family: 'Alegreya Sans SC', sans-serif;
+}
+.ifl-submit-cadastro{
+	background-color: #9e9493;
+	color: #403837;
+	cursor: pointer;
+}
+.ifl-submit-cadastro:hover{
+	color: white;
+	background-color: #736c6c;
+}
+.ifl-submit-cadastro:hover ~ i{
+	background-color: green;
+}
+.close-base-form-cadastro{
+	position: absolute;
+	display: flex;
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	z-index: 999;
+	border-radius: 50%;
+	top: 5px;
+	right: 5px;
+	justify-content: center;
+	align-items: center;
+	font-size: max(30px);
+	cursor: pointer;
+}
+.close-base-form-cadastro:hover{
+	border-color: red;
+	color: red;
+}
+.recaptcha-place{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 10%;
+	background-color: blue;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+}
+.form-cadastro{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-wrap: wrap;
+}
+
+/*------------------------| Tela relatar bug |------------------------*/
+
+.base-form-relatar-bug{
+	position: fixed;
+	display: none;
+	width: 70%;
+	height: 90vh;
+	background-color: black;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url("imagens/fundo_form_login.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 5px;
+	box-shadow: 0 0 15px black;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
+}
+
+.layout-inside-form-relatar-bug{
+	position: relative;
+	display: flex;
+	width: 80%;
+	height: 100%;
+	background-color: rgba(122, 104, 103, .3);
+	flex-wrap: wrap;
+}
+.form-title-relatar-bug{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 20%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: max(5vw, 50px);
+	font-family: 'Alegreya Sans SC', sans-serif;
+}
+.campos-relatar-bug{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 20%;
+	background-color: transparent;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.close-base-form-relatar-bug{
+	position: absolute;
+	display: flex;
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	z-index: 999;
+	border-radius: 50%;
+	top: 5px;
+	right: 5px;
+	justify-content: center;
+	align-items: center;
+	font-size: max(30px);
+	cursor: pointer;
+}
+.close-base-form-relatar-bug:hover{
+	border-color: red;
+	color: red;
+}
+.form-relatar-bug{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-wrap: wrap;
+}
+#navegador-relatar-bug{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	text-align-last: center;
+	justify-content: center;
+	align-items: center;
+	font-size: max(2vw, 20px);
+	background-color: transparent;
+	border: none;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid grey;
+}
+#navegador-relatar-bug option{
+	background-color: black;
+	color: blue;
+	font-size: 30px;
+	text-align: center;
+	text-align-last: center;
+}
+.campo-range1-relatar-bug{
+	position: relative;
+	display: flex;
+	width: 30%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.campo-range1-relatar-bug img{
+	height: 100%;
+}
+.campo-range2-relatar-bug{
+	position: relative;
+	display: flex;
+	width: 40%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.campo-range2-relatar-bug input{
+	cursor: url('imagens/normal.cur'), default !important;
+}
+.resumo-relatar-bug{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	text-align-last: center;
+	text-align: center;
+	background-color: transparent;
+	color: black;
+	border: none;
+	border-top: 1px solid grey;
+	font-size: max(1.5vw, 20px);
+}
+textarea{
+	position: relative;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	padding: 10px 10px;
+	background-color: transparent;
+	border: none;
+	border-top: 1px solid grey;
+	resize: none;
+	font-size: max(1.5vw, 20px);
+}
+::-webkit-input-placeholder {
+   color: black;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: black;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: black;  
+}
+
+:-ms-input-placeholder {  
+   color: black;  
+}
+
+.crb1{
+	height: 10% !important;
+	border: none;
+	border-bottom: 1px solid grey;
+}
+.crb2{
+	height: 30% !important;
+}
+.send-form-relatar-bug{
+	position: absolute;
+	display: flex;
+	width: 50px;
+	height: 50px;
+	background-color: rgba(0, 0, 0, 0.5);
+	bottom: 5px;
+	right: 5px;
+	border-radius: 5px;
+	justify-content: center;
+	align-items: center;
+	font-size: max(25px);
+	cursor: url('imagens/normal.cur'), default !important;
+	border: none;
+}
+.send-form-relatar-bug:hover{
+	background-color: rgba(0, 0, 0, 1.0);
+	color: white;
+}
+/*----------------------------| Tela Erro |-----------------------------*/
+.base-info-erro{
+	position: fixed;
+	display: none;
+	width: 50%;
+	height: 50vh;
+	background-color: black;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 20px;
+	background-image: url("imagens/fundo.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	object-fit: cover;
+	box-shadow: 0 0 15px black;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	z-index: 999;
+}
+.base-info-erro img{
+	height: auto;
+}
+.btn-close-info-erro{
+	position: absolute;
+	display: flex;
+	width: 50px;
+	height: 50px;
+	top: 5px;
+	right: 5px;
+	border: 1px solid black;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	cursor: pointer;
+}
+.btn-close-info-erro:hover{
+	color: red;
+	border-color: red;
+}
+
+@media (max-width: 768px){
+	#area-contents{
+		width: 100%;
+	}
+	.foto-perfil-main-content{
+		height: 100px;
+		width: 80%;
+	}
+	nav{
+		display: none;
+	}
+
+	.menu-toggle{
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 40px;
+		margin-top: 12px;
+		margin-right: 20px;
+		cursor: url('imagens/normal.cur'), default !important;
+		z-index: 999;
+	}
+
+	header.on{
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: unset;
+		background-color: rgba(0, 0, 0, 0.9);
+	}
+
+		nav.on{
+		align-self: center;
+		display: flex;
+	}
+
+		ul{
+		text-align: center;
+		flex-direction: column;
+	}
+
+	.contact-toggle, .about-toggle, .help-toggle{
+		background-color: #e5e5e5;
+		height: 5px;
+		width: 100%;
+		margin: 5px;
+	}
+}

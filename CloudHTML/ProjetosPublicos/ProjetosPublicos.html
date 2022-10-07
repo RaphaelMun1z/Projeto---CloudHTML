@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC	>
+<html lang="pt-BR">
+<head>
+	<title>Cloud HTML | Projetos Públicos</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7" />
+	<!-- Style -->
+	<link rel="stylesheet" type="text/css" href="css_js_ProjetosPublicos/css_ProjetosPublicos.css">
+	<!-- Icon -->
+	<link rel="shortcut icon" href="css_js_ProjetosPublicos/imagens/iconeCloudHtml.ico"> 
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+</head>
+
+<body>
+	<header>
+		<div class="logo">
+			<a href="#">
+				<img src="css_js_ProjetosPublicos/imagens/logoCloudHtml.png">
+			</a>
+		</div>
+		<nav>
+			<ul>
+				<li class="icones-header"><a href="#" title="Salvar projeto"><i class="fas fa-plus"></i></a></li>
+				<li class="icones-header"><a href="#" title="Projetos privados"><i class="fas fa-user-shield"></i></a></li>
+				<li class="icones-header"><a href="#" title="Perfil"><i class="far fa-user-circle"></i></a></li>
+				<li class="icones-header"><a href="#" title="Notificações"><i class="fas fa-envelope-open"></i></a></li>
+				<li class="icones-header"><a href="#" title="Notificações (1+)"><i class="fas fa-envelope-open-text"></i></a></li>
+				<li class="icones-header"><a href="#" title="Relatar BUG"  onclick="showHidenBase(baseRelatarBug, 'abrir')"><i class="fas fa-bug"></i></a></li>
+				<li class="icones-header"><a href="#" title="Entrar" onclick="showHidenBase(baseLogin, 'abrir')"><i class="fas fa-sign-in-alt"></i></a></li>
+				<li class="icones-header exit"><a href="#" title="Sair"><i class="fas fa-sign-out-alt"></i></a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="menu-toggle">
+		<div class="contact-toggle"></div>
+		<div class="about-toggle"></div>
+		<div class="help-toggle"></div>
+	</div>
+
+	<section id="first-section">
+		<img src="css_js_ProjetosPublicos/imagens/logoCloudPublic.png" alt="Logo Cloud HTML">
+	</section>
+	<!-- ----------------------------------------------| Campo de pesquisar |------------------------------------------------ -->
+	<section id="search-place">
+		<div id="text-place">
+			<p>NOME DO PROJETO</p>
+		</div>
+		<div id="align-input-place">
+			<div id="input-place">
+				<input type="text" >
+				<div id="send-place">
+					<button>
+						<i class="fas fa-search"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ----------------------------------------------| Projetos Listados |------------------------------------------------ -->
+	<section class="base-projetos-listados">
+		<div class="projetos-listados">
+			<div class="leftPart">
+				<div class="img-perfil-autor-projetos-listados"></div> 
+			</div>
+			<div class="centerPart"> 
+				<div class="title-projetos-listados">
+					<div class="projectName-title-projetos-listados">PROJETO</div>
+					<div class="title-projeto">
+						Lorem ipsum tortor platea rutrum id est elementum molestie fermentum, imperdiet enim donec aliquam aenean metus fringilla auctor fermentum
+					</div>
+				</div>
+				<div class="autor-projetos-listados">
+					<div class="autorName-autor-projetos-listados">AUTOR</div>
+					<div class="autor-projeto">
+						Lorem ipsum tortor platea rutrum
+					</div>
+				</div> 
+			</div>
+			<div class="rightPart">
+				<div class="rightPart-divisao">
+					<div class="projects-type" title="HTML"><i class="fab fa-html5"></i></div>
+					<div class="projects-type" title="CSS"><i class="fab fa-css3-alt"></i></div>
+					<div class="projects-type" title="JavaScript"><i class="fab fa-js-square"></i></div>
+				</div>
+				<div class="rightPart-divisao">
+					<div class="download-project-button">
+						ABRIR
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ----------------------------------------| Tela Login |----------------------------------- -->
+	<div class="base-form-login">
+		<div class="close-base-form-login" onclick="showHidenBase(baseLogin, 'fechar')">
+			<i class="fas fa-times"></i>
+		</div>
+		<div class="layout-inside-form-login">
+			<form class="form-login" method="POST" action="">
+				<div class="form-title-login">Login</div>
+				<div class="form-input-login">
+					<input class="input-form-login" placeholder="Usuário" type="text" required>
+				</div>
+				<div class="form-input-login">
+					<input class="input-form-login" placeholder="Senha" type="password" required>
+				</div>
+				<div class="form-input-login">
+					<input class="input-form-login ifl-submit" value="Acessar" type="submit">
+				</div>
+				<div class="form-input-login">
+					<div class="form-ancoras-login"><i class="fas fa-key"></i>&nbsp;&nbsp;<a href="#">Esqueceu a senha?</a></div>
+					<div class="form-ancoras-login" onclick="showHidenBase(baseCadastro, 'abrir')"><i class="fas fa-user-plus"></i>&nbsp;&nbsp;<a href="#">Se cadastrar</a></div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- ----------------------------------------| Tela Cadastro |----------------------------------- -->
+	<div class="base-form-cadastro">
+		<div class="close-base-form-cadastro" onclick="showHidenBase(baseCadastro, 'fechar')">
+			<i class="fas fa-times"></i>
+		</div>
+		<div class="layout-inside-form-cadastro">
+			<form class="form-cadastro" method="POST" action="">
+				<div class="form-title-cadastro">Cadastrar</div>
+				<div class="form-input-cadastro">
+					<input class="input-form-cadastro" placeholder="Usuário" type="text" required>
+				</div>
+				<div class="form-input-cadastro">
+					<input class="input-form-cadastro" placeholder="Senha" type="password" required>
+				</div>
+				<div class="form-input-cadastro">
+					<input class="input-form-cadastro" placeholder="Confirmar senha" type="password" required>
+				</div>
+				<div class="form-input-cadastro">
+					<input class="input-form-cadastro" placeholder="E-mail" type="email" required>
+				</div>
+				<div class="recaptcha-place">
+					Recaptcha
+				</div>
+				<div class="form-input-cadastro">
+					<input class="input-form-cadastro ifl-submit-cadastro" value="Cadastrar" type="submit">
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- ----------------------------------------| Tela Relatar bug |----------------------------------- -->
+	<div class="base-form-relatar-bug">
+		<div class="close-base-form-relatar-bug" onclick="showHidenBase(baseRelatarBug, 'fechar')">
+			<i class="fas fa-times"></i>
+		</div>
+		<div class="layout-inside-form-relatar-bug">
+			<form class="form-relatar-bug" method="POST" action="">
+				<div class="form-title-relatar-bug">Relatar Bug</div>
+				<div class="campos-relatar-bug">
+					<select name="" id="navegador-relatar-bug">
+						<option value="GC" selected> Navegador         </option>
+						<option value="GC">          Google Chrome     </option>
+						<option value="IE">          Internet Explorer </option>
+						<option value="MF">		  	 Mozilla Firefox   </option>
+						<option value="OP">		  	 Opera             </option>
+						<option value="ME">		  	 Microsoft Edge    </option>
+						<option value="OT">		  	 Outro             </option>
+					</select>
+				</div>
+				<div class="campos-relatar-bug">
+					<div class="campo-range1-relatar-bug">
+						<img src="css_js_ProjetosPublicos/imagens/LOW.png" alt="Imagem ilustrativa | Low">
+					</div>
+					<div class="campo-range2-relatar-bug">
+						<input type="range" list="complexidaBug">
+						<datalist id="complexidaBug">
+						  <option value="0">
+						  <option value="10">
+						  <option value="20">
+						  <option value="30">
+						  <option value="40">
+						  <option value="50">
+						  <option value="60">
+						  <option value="70">
+						  <option value="80">
+						  <option value="90">
+						  <option value="100">
+						</datalist>
+					</div>
+					<div class="campo-range1-relatar-bug">
+						<img src="css_js_ProjetosPublicos/imagens/HIGH.PNG" alt="Imagem ilustrativa | High">
+					</div>
+				</div>
+				<div class="campos-relatar-bug crb1">
+					<input type="text" class="resumo-relatar-bug" maxlength="60" placeholder="Breve resumo">
+				</div>
+				<div class="campos-relatar-bug crb2">
+					<textarea maxlength="370" placeholder="Digite aqui o máximo de informações possíveis sobre o erro" name="" id="" cols="30" rows="10"></textarea> 
+				</div>
+				<button type="submit" class="send-form-relatar-bug">
+					<i class="fas fa-paper-plane"></i>
+				</button>
+			</form>
+		</div>
+	</div>
+	<!-- ----------------------------------------| Tela Erro |----------------------------------- -->
+	<div class="base-info-erro">
+		<div class="btn-close-info-erro" onclick="showHidenBase(baseInfoErro, 'fechar')">
+			<i class="fas fa-times"></i>
+		</div>
+		<img src="css_js_index/imagens/img_erro.png" alt="Ilustração Erro">
+	</div>
+
+	<div class="loader-wrapper">
+		<img src="css_js_ProjetosPublicos\imagens/load_cloud.gif" alt="Carregando">
+    </div>
+
+
+<!-- Script -->
+	<script type="text/javascript" src="css_js_ProjetosPublicos/js_ProjetosPublicos.js"></script>
+</body>
+</html>
